@@ -18,36 +18,47 @@
         <!-- ISI KONTEN -->
         <div class="container py-4">
 
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Insert your name">
-            </div>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Insert your height">
-            </div>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Insert your Weight">
-            </div>
-            <div class="input-group mb-3">
-                <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="dd / mm / yy">
-            </div>
-            <div class="input-group">
-                <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                  <option selected>Have You Married?</option>
-                  <option value="1">True</option>
-                  <option value="2">False</option>
-                </select>
-            </div>
+            <form action="<%= isEdit ? '/edit/' + user.id : '/add' %>" method="POST">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="name" placeholder="Insert your name" value="<%= user ? user.name : '' %>" required>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control" name="height" placeholder="Insert your height" value="<%= user ? user.height : '' %>" required>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control" name="weight" placeholder="Insert your Weight" value="<%= user ? user.weight : '' %>" required>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="date" class="form-control" placeholder="dd / mm / yy" name="birthdate" value="<%= user ? user.birthdate : '' %>" required>
+                </div>
+                <div class="input-group">
+                    <select class="form-select" name="married" required>
+                        <option value="">Have You Married?</option>
+                      
+                        <option value="1"
+                          <%= user && user.married ? 'selected' : '' %>>
+                          Yes
+                        </option>
+                      
+                        <option value="0"
+                          <%= user && !user.married ? 'selected' : '' %>>
+                          Not Yet
+                        </option>
+                      </select>
 
-            <!-- BUTTON FULL WIDTH -->
-            <button class="btn btn-success w-100 mb-3 mt-3">
-                Save
-            </button>
+                </div>
 
-            <a href="/" class="btn btn-primary w-100 mb-4">
+                <!-- BUTTON FULL WIDTH -->
+                <button class="btn btn-success w-100 mb-3 mt-3">
+                    <%= isEdit ? 'Update' : 'Save' %>
+                </button>
+
+                <a href="/" class="btn btn-primary w-100 mb-4">
                 Cancel
-            </a>
-
+                </a>
+            </form>
         </div>
+
     </div>
 
 </body>
