@@ -1,24 +1,56 @@
-[{
-        "name": "Himawan",
-        "height": 168,
-        "weight": 80.52,
-        "birthdate": "1991-03-12",
-        "married": false
-    },
-    {
-
-        "name": "Rahmat",
-        "height": 171,
-        "weight": 57.699,
-        "birthdate": "1996-11-03",
-        "married": true
-    },
-    {
-
-        "name": "Aziz",
-        "height": 167,
-        "weight": 57.5,
-        "birthdate": "1996-05-13",
-        "married": false
-    }
+[
+  {
+    "name": "Himawan",
+    "height": 168,
+    "weight": 80.52,
+    "birthdate": "1991-03-12",
+    "married": false,
+    "id": 1769574133278,
+    "merried": false
+  },
+  {
+    "name": "Rahmat",
+    "height": 171,
+    "weight": 57.699,
+    "birthdate": "1996-11-03",
+    "married": true,
+    "id": 1769574133296,
+    "merried": false
+  },
+  {
+    "id": 1769606570033,
+    "name": "Yudhistira M",
+    "height": 165,
+    "weight": 48,
+    "birthdate": "2026-01-30",
+    "married": false,
+    "merried": true
+  },
+  {
+    "id": 1769658558238,
+    "name": "Andrian",
+    "height": 160,
+    "weight": 55,
+    "birthdate": "2025-08-06",
+    "married": true,
+    "merried": false
+  },
+  {
+    "id": 1769659350156,
+    "name": "faizh",
+    "height": 170,
+    "weight": 12,
+    "birthdate": "2025-12-31",
+    "married": false,
+    "merried": true
+  },
+  {
+    "id": 1769659367248,
+    "name": "edit",
+    "height": 168,
+    "weight": 70,
+    "birthdate": "2026-01-16",
+    "married": false,
+    "merried": false
+  }
 ]
