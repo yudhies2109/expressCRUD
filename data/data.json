@@ -52,5 +52,14 @@
     "birthdate": "2026-01-16",
     "married": false,
     "merried": false
+  },
+  {
+    "id": 1769661177715,
+    "name": "Salsa",
+    "height": 175,
+    "weight": 23,
+    "birthdate": "2026-01-20",
+    "married": true,
+    "merried": false
   }
 ]
