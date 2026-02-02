@@ -69,7 +69,7 @@ router.post('/add', (req, res) => {
     const { name, height, weight, birthdate, married } = req.body;
 
     // Validasi dasar
-    if (!name || !height || !weight || !birthdate || !married) {
+    if (!name || !height || !weight || !birthdate || married === undefined) {
         return res.status(400).send('Data tidak lengkap');
     }
 
@@ -179,7 +179,7 @@ router.post('/edit/:id', (req, res) => {
             height: Number(height),
             weight: Number(weight),
             birthdate,
-            merried: married === '1'
+            married: married === '1'
         };
 
         fs.writeFile(filePath, JSON.stringify(users, null, 2), err => {
